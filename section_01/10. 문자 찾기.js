@@ -1,4 +1,5 @@
 // 한 개의 문자열을 입력받고 특정 문자열에 몇개 존재하는지 찾기
+// 20210410
 
 function strCal(arr, str) {
   let result = 0;
@@ -14,4 +15,4 @@ function strCal(arr, str) {
   return result;
 }
 
-console.log(strCal('COMPUTERPROGRAMMING', 'R'));
+console.log(strCal('COMPUTERPROGRAMMING', 'R')); 
