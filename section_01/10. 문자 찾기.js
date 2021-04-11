@@ -17,3 +17,20 @@ function strCal(arr, str) {
 }
 
 console.log(strCal('COMPUTERPROGRAMMING', 'R')); 
+
+// function solution(str, char) {
+//   let cnt = 0;
+//   for (let c of str) {
+//       if (c === char) cnt++;
+//   }
+//   return cnt;
+// }
+
+// function solution(s, t){
+//   let answer=s.split(t).length;
+
+//   console.log(s.split(t));
+//   return answer-1;
+// }
+
+// console.log(solution('COMPUTERPROGRAMMING', 'R')); 

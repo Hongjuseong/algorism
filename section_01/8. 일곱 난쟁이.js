@@ -6,10 +6,11 @@ function sevenDwarf(arr) {
   const total = arr.reduce((prev, curr) => prev + curr, 0);
 
   // 0~7
-  for (ix = 0, ixLen = arr.length - 1; ix < ixLen; ix++) {
+  for (ix = 0, ixLen = 8; ix < ixLen; ix++) {
 
     // 1~8
-    for (jx = 1, jxLen = arr.length; jx < jxLen; jx++) {
+    for (jx = ix + 1, jxLen = 9; jx < jxLen; jx++) {
+      // console.log(jx);
 
       if (total - (arr[ix] + arr[jx]) === 100) {
         arr.splice(jx, 1);

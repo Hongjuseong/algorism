@@ -7,3 +7,12 @@ function calculate(arr) {
 }
 
 console.log(calculate([5, 3, 7, 11, 2, 15, 17]));
+
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MIN_SAFE_INTEGER);
+
+// function solution(arr) {
+//   return arr.reduce((acc, n) => Math.min(acc, n), Number.MAX_SAFE_INTEGER)
+// }
+
+// console.log(solution([5, 3, 7, 11, 2, 15, 17]));

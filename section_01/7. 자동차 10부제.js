@@ -15,3 +15,11 @@ function check(num, arr) {
 }
 
 console.log(check(0, [12, 20, 54, 30, 87, 91, 30]));
+
+// function solution(day, arr){
+// 	let answer=0;
+// 	for(let x of arr){
+// 	    if(x%10==day) answer++;
+// 	}
+// 	return answer;
+// }
