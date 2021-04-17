@@ -10,7 +10,7 @@ function middle(str) {
   if (str.length % 2 === 1) odd = true;
   else odd = false;
 
-  if (odd === true) result = str.substr(val, 1);
+  if (odd) result = str.substr(val, 1);
   else result = str.substr(val - 1, 2);
 
   return result;
