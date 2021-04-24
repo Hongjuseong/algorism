@@ -3,6 +3,8 @@ function pressure(str) {
   let cnt = 1;
   let ix;
 
+  str += ' ';
+
   for (ix = 0; ix < str.length; ix++) {
     if (str[ix] === str[ix + 1]) {
       cnt++;

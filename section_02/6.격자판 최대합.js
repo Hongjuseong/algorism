@@ -31,7 +31,7 @@ function calculate(base, arr) {
   // 대각선의 합
   for (ix = 0; ix < base; ix++) {
     cross += arr[ix][ix];
-    cross2 += arr[ix][base - 1 - [ix]];
+    cross2 += arr[ix][base - 1 - ix];
   }
 
   // 양 대각선 값

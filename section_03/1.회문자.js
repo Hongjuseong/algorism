@@ -1,9 +1,9 @@
 // 회문 문자열이면 YES, 아니면 NO
 
-function reverse(arr) {
+function reverse(str) {
   let result = 'NO';
 
-  let lower = arr.toLowerCase();
+  let lower = str.toLowerCase();
   let reverse = lower.split('').reverse().join('');
 
   if (lower === reverse) {
@@ -13,4 +13,4 @@ function reverse(arr) {
   return result;
 }
 
-console.log(reverse('good'));
+console.log(reverse('gooG'));

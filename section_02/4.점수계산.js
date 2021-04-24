@@ -1,7 +1,7 @@
-// 점수계산
-// 1이면 정답, 0이면 오답
-// 정답이면 1점, 오답이면 0점
-// 연속적으로 정답이면 +1점씩 가산점
+// // 점수계산
+// // 1이면 정답, 0이면 오답
+// // 정답이면 1점, 오답이면 0점
+// // 연속적으로 정답이면 +1점씩 가산점
 
 function calculate(base, arr) {
   let result = [];
@@ -25,3 +25,19 @@ function calculate(base, arr) {
 }
 
 console.log(calculate(10, [1, 0, 1, 1, 1, 0, 0, 1, 1, 0]));
+
+// function solution(arr) {
+//   let result = 0;
+//   let added = 1;
+//   for (let n of arr) {
+//       if (n === 1) {
+//           result += added;
+//           added++;
+//       } else {
+//           added = 1;
+//       }
+//   }
+//   return result;
+// }
+
+// console.log(solution([1, 0, 1, 1, 1, 0, 0, 1, 1, 0]));
