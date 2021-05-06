@@ -7,6 +7,11 @@ function concat(arr, num) {
   let point1 = 0;
   let point2 = 0;
 
+  // 처음 5개
+  // for (let i = 0; i < aLen; i++) {
+  //   result++;
+  // }
+
   while (point1 < aLen) {
 
     if (sum < num && point2 !== aLen) {
@@ -24,6 +29,11 @@ function concat(arr, num) {
       if (sum <= num) {
         result++;
       }
+
+      // point2가 aLen인 시점부터는 빼줌
+      // if (point2 === aLen) {
+      //   result--;
+      // }
 
       point1++;
     }
