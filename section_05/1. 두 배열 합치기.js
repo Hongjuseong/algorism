@@ -1,10 +1,10 @@
-// function concat(arr, arr2) {
-//   const result = [...arr, ...arr2];
+// // function concat(arr, arr2) {
+// //   const result = [...arr, ...arr2];
 
-//   return result.sort((a, b) => a - b);
-// }
+// //   return result.sort((a, b) => a - b);
+// // }
 
-// console.log(concat([1, 3, 5], [2, 3, 6, 7, 9]));
+// // console.log(concat([1, 3, 5], [2, 3, 6, 7, 9]));
 
 function concat(arr, arr2) {
   const result = [];
@@ -28,6 +28,12 @@ function concat(arr, arr2) {
     }
   }
 
+  // 1번째 배열 나머지 값 처리
+  while (point1 < aLen) {
+		result.push(arr[point1]);
+		point1++;
+	}
+
   // 2번째 배열 나머지 값 처리
   while (point2 < bLen) {
     result.push(arr2[point2]);
@@ -38,3 +44,33 @@ function concat(arr, arr2) {
 }
 
 console.log(concat([1, 3, 5], [2, 3, 6, 7, 9]));
+
+// function concat(arr1, arr2) {
+// 	const answer = [];
+// 	let left = 0;
+// 	let right = 0;
+// 	while (left < arr1.length && right < arr2.length) {
+// 		if (arr1[left] < arr2[right]) {
+// 			answer.push(arr1[left]);
+// 			left++;
+// 		} else if (arr1[left] > arr2[right]) {
+// 			answer.push(arr2[right]);
+// 			right++;
+// 		} else {
+// 			answer.push(arr1[left]);
+// 			answer.push(arr2[right]);
+// 			left++;
+// 			right++;
+// 		}
+// 	}
+// 	while (left < arr1.length) {
+// 		answer.push(arr1[left]);
+// 		left++;
+// 	}
+// 	while (right < arr2.length) {
+// 		answer.push(arr2[right]);
+// 		right++;
+// 	}
+
+// 	return answer;
+// }
