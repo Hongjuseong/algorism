@@ -1,22 +1,22 @@
-function solution(arr, arr2) {
+function solution(str, str2) {
   const anagram = {};
   const anagram2 = {};
 
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < str.length; i++) {
 
-    if (!anagram[arr[i]]) {
-      anagram[arr[i]] = 1;
+    if (anagram[str[i]]) {
+      anagram[str[i]]++;
     } else {
-      anagram[arr[i]]++;
+      anagram[str[i]] = 1;
     }
   }
 
-  for (let i = 0; i < arr2.length; i++) {
+  for (let i = 0; i < str2.length; i++) {
 
-    if (!anagram2[arr2[i]]) {
-      anagram2[arr2[i]] = 1;
+    if (anagram2[str2[i]]) {
+      anagram2[str2[i]]++;
     } else {
-      anagram2[arr2[i]]++;
+      anagram2[str2[i]] = 1;
     }
   }
 

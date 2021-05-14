@@ -1,12 +1,12 @@
-function solution(arr) {
+function solution(str) {
   const vote = {};
 
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < str.length; i++) {
 
-    if (!vote[arr[i]]) {
-      vote[arr[i]] = 1;
+    if (vote[str[i]]) {
+      vote[str[i]]++;
     } else {
-      vote[arr[i]]++;
+      vote[str[i]] = 1;
     }
   }
 
