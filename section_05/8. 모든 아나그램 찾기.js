@@ -30,8 +30,9 @@ function solution(s, t) {
         const keys = Object.keys(anagram);
 
         for (let i = 0; i < keys.length; i++) {
+          const key = keys[i];
 
-          if (anagram[keys[i]] > 0 && anagram[keys[i]] !== anagram2[keys[i]]) {
+          if (anagram[key] > 0 && anagram[key] !== anagram2[key]) {
             flag = false;
             break;
           }
