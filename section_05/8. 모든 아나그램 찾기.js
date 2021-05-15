@@ -27,19 +27,23 @@ function solution(s, t) {
       if (end >= t.length - 1) {
         let flag = true;
 
-        for (let key in anagram) {
+        const keys = Object.keys(anagram);
 
-          if (anagram[key] !== anagram2[key]) {
+        for (let i = 0; i < keys.length; i++) {
+
+          if (anagram[keys[i]] > 0 && anagram[keys[i]] !== anagram2[keys[i]]) {
             flag = false;
             break;
           }
-
         }
 
         if (flag) count++;
 
-        delete anagram[s[start++]]
-        str = str.substring(start);
+        if (anagram[s[start]]) {
+          anagram[s[start]] = anagram[s[start]] - 1;
+          start++;
+        }
+        str = str.substring(t.length - 2);
       }
   }
 
