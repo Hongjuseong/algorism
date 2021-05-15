@@ -29,9 +29,9 @@ function solution(str, str2) {
   if (keys.length === keys2.length) {
 
     for (let i = 0; i < keys.length; i++) {
-      const anagramKey = keys[i];
+      const key = keys[i];
       
-      if (anagram[anagramKey] === anagram2[anagramKey]) {
+      if (anagram[key] === anagram2[key]) {
         cnt++;
       }
       
