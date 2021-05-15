@@ -40,9 +40,9 @@ function solution(s, t) {
         if (flag) count++;
 
         if (anagram[s[start]]) {
-          anagram[s[start]] = anagram[s[start]] - 1;
-          start++;
+          anagram[s[start++]]--;
         }
+
         str = str.substring(t.length - 2);
       }
   }
