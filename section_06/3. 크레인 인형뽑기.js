@@ -11,7 +11,6 @@ function solution(board, moves) {
   for (let i = 0; i < moves.length; i++) {
     
     for (let j = 0; j < board.length; j++) {
-
       const doll = board[j][moves[i]];
 
       if (doll) {
