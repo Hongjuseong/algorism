@@ -29,6 +29,7 @@ function solution(board, moves) {
     }
   }
 
+  console.log(stack);
   return cnt * 2;
 }
 
