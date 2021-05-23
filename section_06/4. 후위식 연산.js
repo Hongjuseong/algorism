@@ -23,11 +23,11 @@ function solution(numStr) {
   const stack = [];
 
   for (let i = 0; i < numStr.length; i++) {
-    const num = Number(numStr[i]);
+    const num = numStr[i];
 
     if (isNaN(num)) {
-      const secondNum = stack.pop();
-      const firstNum = stack.pop();
+      const secondNum = Number(stack.pop());
+      const firstNum = Number(stack.pop());
       const operator = numStr[i];
 
       stack.push(calculate(firstNum, secondNum, operator));
