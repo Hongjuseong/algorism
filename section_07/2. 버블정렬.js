@@ -18,6 +18,7 @@ function solution(num) {
 }
 
 console.log(solution([13, 5, 11, 7, 23, 15]));
+console.log(solution([2, 6, 1, 7, 23, 15]));
 
 // 버블 정렬
 // 인접한 두 원소를 검사하여 정렬하는 알고리즘
