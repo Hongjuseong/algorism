@@ -2,7 +2,7 @@ function solution(num) {
 
   for (let i = 0; i < num.length - 1; i++) {
 
-    for (let j = 0; j < num.length - 1; j++) {
+    for (let j = 0; j < num.length - i - 1; j++) {
 
       if (num[j] > num[j + 1]) {
         const temp = num[j];
@@ -15,6 +15,9 @@ function solution(num) {
   return num;
 
 }
+
+// 선택정렬보다 교환을 위 조건마다 해주기 때문에 많이 교환한다.
+// [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
 
 console.log(solution([13, 5, 11, 7, 23, 15]));
 console.log(solution([2, 6, 1, 7, 23, 15]));
