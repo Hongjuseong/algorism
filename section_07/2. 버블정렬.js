@@ -1,6 +1,5 @@
 function solution(num) {
 
-  // 바깥쪽 for 문은 단순 반복 횟수 제공용 => while 문도 될듯
   for (let i = 0; i < num.length - 1; i++) {
 
     for (let j = 0; j < num.length - 1; j++) {

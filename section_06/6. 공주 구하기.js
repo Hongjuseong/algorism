@@ -1,5 +1,6 @@
 function solution(n, k) {
-  const prince = new Array(n).fill(0).map((v, i) => i + 1);
+  // const prince = new Array(n).fill(0).map((v, i) => i + 1);
+  const prince = Array.from({length: 8}, (v, i) => i + 1);
   let cnt = 1;
   
   while(prince.length > 1) {
