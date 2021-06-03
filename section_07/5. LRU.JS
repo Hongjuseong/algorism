@@ -1,8 +1,6 @@
 function solution(len, work) {
   const cache = new Array(len[0]).fill(0);
 
-  let result = ''
-
   for (let i = 0; i < len[1]; i++) {
 
     if (cache.includes(work[i])) {
@@ -19,10 +17,9 @@ function solution(len, work) {
       cache.unshift(work[i]);
     }
 
-    result = cache.join('');
   }
 
-  return result;
+  return cache;
 }
 
 console.log(solution([5, 9], [1, 2, 3, 2, 6, 2, 3, 5, 7]));
