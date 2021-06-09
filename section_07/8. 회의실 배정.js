@@ -1,7 +1,7 @@
 function solution(arr) {
   const conf = [...arr];
   let result = 0;
-  let currEnd = 0;
+  let currEnd = Number.MIN_SAFE_INTEGER;
 
   conf.sort((a, b) => {
     if (a[1] === b[1]) {
