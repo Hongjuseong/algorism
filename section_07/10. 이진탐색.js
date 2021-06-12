@@ -10,8 +10,10 @@ function solution(arr, target) {
       return mid + 1;
     } else if (asc[mid] < target) {
       start = mid + 1;
+      // start = mid;
     } else {
       end = mid - 1;
+      // end = mid;
     }
   }
 }
@@ -19,6 +21,7 @@ function solution(arr, target) {
 console.log(solution([23, 87, 65, 12, 57, 32, 99, 81], 32));
 
 // 12, 23, 32, 57, 65, 81, 87, 99
+// 한번 비교된 값을 또 비교할 필요가 없어서 +/- 1씩 해줌
 
 // 시간 복잡도 : O(log(n))
 // 이진 탐색은 정렬 된 배열 내에서 대상 값의 위치를 찾는 탐색 알고리즘입니다. 
