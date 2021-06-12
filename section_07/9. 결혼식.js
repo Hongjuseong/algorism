@@ -5,6 +5,8 @@ function solution(arr) {
   let count = 0;
   let max = Number.MIN_SAFE_INTEGER;
 
+  // 1은 오는 시간
+  // 2는 가는 시간
   for (let i = 0; i < guests.length; i++) {
     const guest = guests[i];
 
