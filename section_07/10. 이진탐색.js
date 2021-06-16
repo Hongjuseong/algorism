@@ -2,12 +2,14 @@ function solution(arr, target) {
   const asc = arr.sort((a, b) => a - b);
   let start = 0;
   let end = asc.length - 1;
+  let answer = 0;
 
   while (start <= end) {
     const mid = Math.floor((end + start) / 2);
 
     if (asc[mid] === target) {
-      return mid + 1;
+      answer = mid + 1;
+      break;
     } else if (asc[mid] < target) {
       start = mid + 1;
       // start = mid;
