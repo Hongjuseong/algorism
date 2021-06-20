@@ -12,7 +12,6 @@ function solution(arr, cnt) {
     if (horseCount(stables, mid) < cnt) {
       end = mid - 1;
     } else {
-      // 2가 나왔을 때 더 나은 값을 찾기 위한 로직임
       start = mid + 1;
     }
 
