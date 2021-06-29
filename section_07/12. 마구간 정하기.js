@@ -7,7 +7,7 @@ function solution(arr, cnt) {
   
   while (start <= end) {
     const mid = parseInt((start + end) / 2);
-    // console.log(mid);
+    // console.log(`mid = ${mid}`);
 
     if (horseCount(stables, mid) < cnt) {
       end = mid - 1;
@@ -15,7 +15,10 @@ function solution(arr, cnt) {
       start = mid + 1;
     }
 
-    result = mid;
+    // console.log(`end = ${end}`);
+    // console.log(`start = ${start}`);
+
+    result = start;
   }
 
   return result;
@@ -31,6 +34,8 @@ function horseCount(stables, mid) {
     if (stable - lastStable > mid) {
       horseCount++;
       lastStable = stable;
+      // console.log(`horseCount = ${horseCount}`);
+      // console.log(`lastStable = ${lastStable}`);
     } 
   }
 
@@ -38,3 +43,5 @@ function horseCount(stables, mid) {
 }
 
 console.log(solution([1, 2, 8, 4, 9], 3));
+console.log(solution([1, 7, 8, 9], 3));
+console.log(solution([1, 14, 9, 16, 100], 4));
