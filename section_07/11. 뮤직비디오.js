@@ -1,6 +1,10 @@
 function solution(arr, cnt) {
   const max = arr.reduce((prev, curr) => prev + curr);
-  const min = max / cnt;
+  // const min = max / cnt;
+  const min = Math.max(...arr);
+
+  console.log(max);
+  console.log(min);
 
   let end = max;
   let start = min;
@@ -10,13 +14,12 @@ function solution(arr, cnt) {
     const mid = Math.floor((start + end) / 2);
 
     if (musicCount(arr, mid) <= cnt) {
+      result = mid;
       end = mid - 1;
       // console.log(end);
     } else {
       start = mid + 1;
     }
-
-    result = mid;
   }
 
   return result;
