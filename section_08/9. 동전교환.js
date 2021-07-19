@@ -1,27 +1,27 @@
-function solution(money, price) {
-  let answer = [];
-  let check = Array.from({length: money.length}).fill(0);
+function solution(arr, price) {
+  let answer = Number.MAX_SAFE_INTEGER;
  
-  function DFS(num) {
+  function DFS(depth, sum) {
+    if (sum > price) return;
 
-    if (num === money.length) {
+    if (depth === arr.length) {
 
-      if (price === [...check].reduce((prev, curr) => prev + curr)) {
-        answer.push([...check], [...check].length);
+      if (sum === price) {
+        answer = Math.min(answer, depth);
       }
       return;
+
     } else {
-      
-      for (let i = 0; i < money.length; i++) {
-        check[num] = money[i];  
-        DFS(num + 1);
+
+      for (let i = 0; i < arr.length; i++) {
+        DFS(depth + 1, sum + arr[i]);
       }
+      
     }
   }
 
-  DFS(0);
-
-  return answer[1];
+  DFS(0, 0);
+  return answer;
 }
 
 console.log(solution([1, 2, 5], 15));
