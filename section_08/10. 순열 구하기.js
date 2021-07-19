@@ -1,8 +1,8 @@
-function solution(max, cnt) {
+function solution(cnt, arr) {
   let answer = [];
   let check = Array.from({length: cnt}).fill(0);
  
-  function DFS(num) {
+  function DFS(num, prev) {
 
     if (num === cnt) {
       // console.log(check);
@@ -10,19 +10,21 @@ function solution(max, cnt) {
       return;
     } else {
       
-      for (let i = 1; i <= max; i++) {
+      for (let i = 0; i < arr.length; i++) {
         // console.log(`num = ${num}`);
         // console.log(`i = ${i}`);
-        check[num] = i;  
-        DFS(num + 1);
+        if (prev !== arr[i]) {
+          check[num] = arr[i];  
+          DFS(num + 1, check[num]);
+        }
       }
     }
   }
 
-  DFS(0);
+  DFS(0, 0);
 
   answer.push(answer.length);
   return answer;
 }
 
-console.log(solution(3, 2));
+console.log(solution(2, [3, 6, 9]));
