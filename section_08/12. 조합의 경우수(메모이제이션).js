@@ -2,6 +2,7 @@ function solution(n, r) {
   let answer;
 
   const memo = Array.from({length: n + 1}, () => Array(n + 1).fill(0)); 
+	// console.log(memo);
 
 	function DFS(n, r) {
     if (memo[n][r]) return memo[n][r];
