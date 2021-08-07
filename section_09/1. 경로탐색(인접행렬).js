@@ -7,7 +7,7 @@ function solution(n, arr) {
     multi[arr[i][0]][arr[i][1]] = 1;
   }
 
-  console.log(multi);
+  // console.log(multi);
 
   function DFS(num) {
     if (num === n) {
