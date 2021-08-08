@@ -1,11 +1,11 @@
 //nCr
 function combinate(n, r) {
-  let answer;
+	let answer;
 
-  const memo = Array.from({length: n + 1}, () => Array(n + 1).fill(0)); 
+	const memo = Array.from({length: n + 1}, () => Array(n + 1).fill(0)); 
 
 	function DFS(n, r) {
-    if (memo[n][r]) return memo[n][r];
+		if (memo[n][r]) return memo[n][r];
 		if (n === r || r === 0) return 1;
 		else return memo[n][r] = DFS(n - 1, r - 1) + DFS(n - 1, r);
 	}
@@ -15,18 +15,18 @@ function combinate(n, r) {
 }
 
 function solution(n, f) {
-  let answer = [];
-  const ch = Array.from({length: n}, () => 0); // 0, 1 변환
+	let answer = [];
+	const ch = Array.from({length: n}, () => 0); // 0, 1 변환
 	const tmp = Array.from({length: n}, () => 0); // 임시값
-  const combi = Array.from({length: n}, () => 0); // 1 3 3 1
+	const combi = Array.from({length: n}, () => 0); // 1 3 3 1
 
 	function DFS(depth, sum) {
 		if (answer.length) return;
 		if (depth === n) {
 
-      if (sum === f) {				
-        answer = [...tmp];
-      }
+			if (sum === f) {				
+				answer = [...tmp];
+			}
 		} else {
 			for (let i = 0; i < n; i++) {
 
@@ -42,10 +42,10 @@ function solution(n, f) {
 		}
 	}
 
-  // 1 3 3 1
-  for (let i = 0; i < n; i++) {
-    combi[i] = combinate(n - 1, i);
-  }
+	// 1 3 3 1
+	for (let i = 0; i < n; i++) {
+		combi[i] = combinate(n - 1, i);
+	}
 
 	DFS(0, 0);
 	return answer;

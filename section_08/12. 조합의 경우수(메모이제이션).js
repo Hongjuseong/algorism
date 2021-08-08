@@ -1,11 +1,11 @@
 function solution(n, r) {
-  let answer;
+	let answer;
 
-  const memo = Array.from({length: n + 1}, () => Array(n + 1).fill(0)); 
+	const memo = Array.from({length: n + 1}, () => Array(n + 1).fill(0)); 
 	// console.log(memo);
 
 	function DFS(n, r) {
-    if (memo[n][r]) return memo[n][r];
+		if (memo[n][r]) return memo[n][r];
 		if (n === r || r === 0) return 1;
 		else return memo[n][r] = DFS(n - 1, r - 1) + DFS(n - 1, r);
 	}

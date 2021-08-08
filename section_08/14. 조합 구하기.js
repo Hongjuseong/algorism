@@ -1,14 +1,14 @@
 function solution(n, m) {
 	const answer = [];
 	const tmp = Array.from({length: m}, () => 0);
-	
+
 	function DFS(depth, start) {
 		if (depth === m) answer.push(tmp.slice());
 		else {
 
 			for (let i = start; i <= n; i++) {
-        tmp[depth] = i;
-        DFS(depth + 1, i + 1);
+				tmp[depth] = i;
+				DFS(depth + 1, i + 1);
 			}
 		}
 	}
