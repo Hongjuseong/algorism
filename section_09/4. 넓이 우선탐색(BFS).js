@@ -4,7 +4,7 @@ function solution() {
 
   while(queue.length) { 
     const v = queue.shift();
-    console.log(v);
+    // console.log(v);
 
     for (let nv of [v * 2, v * 2 + 1]) {
         if (nv > 7) continue;

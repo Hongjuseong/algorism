@@ -1,23 +1,26 @@
 function solution(n, arr) {
   let answer = 0;
-  const multi = Array.from({length: n + 1}, () => Array(n + 1).fill(0));
+  const multi = Array.from({length: n + 1}, () => Array());
   const ch = Array.from({length: n + 1}, () => 0); 
 
+  // 인접리스트
   for (let i = 0; i < arr.length; i++) {
-    multi[arr[i][0]][arr[i][1]] = 1;
+    multi[arr[i][0]].push(arr[i][1]);
   }
+
+  console.log(multi);
 
   function DFS(num) {
     if (num === n) {
       answer++;
     } 
     else {
-      for (let i = 1; i <= n; i++) {
+      for (let i = 0; i < multi[num].length; i++) {
 
-        if (multi[num][i] === 1 && ch[i] === 0) {
-          ch[i] = 1;
-          DFS(i);
-          ch[i] = 0;
+        if (ch[multi[num][i]] === 0) {
+          ch[multi[num][i]] = 1;
+          DFS(multi[num][i]);
+          ch[multi[num][i]] = 0;
         }
       }
     }

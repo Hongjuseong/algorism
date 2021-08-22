@@ -3,11 +3,12 @@ function solution(n, arr) {
   const multi = Array.from({length: n + 1}, () => Array(n + 1).fill(0));
   const ch = Array.from({length: n + 1}, () => 0); 
 
+  // 인접행렬
   for (let i = 0; i < arr.length; i++) {
     multi[arr[i][0]][arr[i][1]] = 1;
   }
 
-  // console.log(multi);
+  console.log(multi);
 
   function DFS(num) {
     if (num === n) {
