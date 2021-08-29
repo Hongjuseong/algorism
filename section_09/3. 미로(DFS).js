@@ -7,11 +7,11 @@ function solution(arr) {
   function DFS(x, y) {
     if (x === 6 && y === 6) answer++;
     else {
-      for(let k = 0; k < mx.length; k++) {
+      for (let k = 0; k < 4; k++) {
         const ax = x + mx[k];
         const ay = y + my[k];
 
-        if((ax > -1 && ax < 7) && (ay > -1 && ay < 7) && arr[ax][ay] === 0) { 
+        if ((ax > -1 && ax < 7) && (ay > -1 && ay < 7) && arr[ax][ay] === 0) { 
           arr[ax][ay] = 1; 
           DFS(ax, ay); 
           arr[ax][ay] = 0;
