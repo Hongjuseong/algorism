@@ -3,7 +3,7 @@ function solution(arr, price) {
  
   function DFS(depth, sum) {
     if (sum > price) return;
-    if (depth >= answer)  return; // cut edge
+    if (depth >= answer) return; // cut edge
     if (sum === price) {
       console.log(depth, sum);
       answer = Math.min(answer, depth);
