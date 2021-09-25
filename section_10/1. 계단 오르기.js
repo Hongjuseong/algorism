@@ -4,7 +4,7 @@ function solution(n) {
   if (n === 2) return 2;
 
   let answer = 0;
-  const arr = Array.from({length: n + 1}, () => 0);
+  const arr = Array.from({length: n + 1}, () => 0); // 가는 방법의 수
 
   arr[1] = 1; // 1계단 1
   arr[2] = 2; // 2계단 1 + 1, 2
@@ -29,3 +29,6 @@ console.log(solution(7));
 13
 21
 */
+
+// 문제를 작은 단위로 쪼개서 접근하는 방식
+// 답이 나오면 기록을 해두고 문제의 범위를 넓혀나감
